@@ -68,4 +68,20 @@ public class WaterTest extends TestCase {
         instance.setFieldSize(11);
         assertEquals("error di getFieldSize", instance.getFieldSize(), 11);
     }
+
+    public void testIsLog() throws Exception {
+
+    }
+
+    public void testSetLog() throws Exception {
+
+    }
+
+    public void testGenerateLog() throws Exception {
+
+    }
+
+    public void testMoveField() throws Exception {
+
+    }
 }
