@@ -15,7 +15,7 @@ public class Main{
 
         for (int i = 0; i < 12; i++) {
             int GroundWater = random.nextInt(2) + 1;
-            if (GroundWater == 2){
+            if (GroundWater == 2) {
                 Water water = new Water();
                 for (int j = 0; j < water.getFieldSize(); j++) {
                     if (water.isLog(j))
@@ -25,9 +25,9 @@ public class Main{
                 }
                 System.out.println("(Water)");
             } //GroundWater = 2 means Water
-            else{
+            else {
                 Ground ground = new Ground();
-                for (int j = 0; j < ground.getFieldSize(); j++){
+                for (int j = 0; j < ground.getFieldSize(); j++) {
                     if (ground.isTree(j))
                         System.out.print("0 ");
                     else
@@ -36,7 +36,5 @@ public class Main{
                 System.out.println("(Ground)");
             }
         }
-
-
     }
 }
