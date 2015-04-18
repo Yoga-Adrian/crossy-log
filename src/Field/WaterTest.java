@@ -3,9 +3,6 @@ package Field;
 import junit.framework.TestCase;
 import Point.Point;
 
-/**
- * Created by omarcelh on 18-Apr-15.
- */
 public class WaterTest extends TestCase {
 
     public void testIsLog() throws Exception {
@@ -27,7 +24,7 @@ public class WaterTest extends TestCase {
             if(instance.isLog(i))
                 counter++;
         }
-        assertTrue("error di generateLog", counter >=1 && counter <= instance.getFieldSize()/2);
+        assertTrue("error di generateLog", counter >= 1 && counter <= instance.getFieldSize() / 2);
     }
 
     public void testMoveField() throws Exception {
@@ -67,21 +64,5 @@ public class WaterTest extends TestCase {
         Water instance = new Water();
         instance.setFieldSize(11);
         assertEquals("error di getFieldSize", instance.getFieldSize(), 11);
-    }
-
-    public void testIsLog() throws Exception {
-
-    }
-
-    public void testSetLog() throws Exception {
-
-    }
-
-    public void testGenerateLog() throws Exception {
-
-    }
-
-    public void testMoveField() throws Exception {
-
     }
 }
