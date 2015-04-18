@@ -7,29 +7,31 @@ import java.util.Vector;
 
 
 public class Ground extends Field{
-    private Vector<Boolean> hasTree;
+    private Vector<Boolean> tree;
 
     public Ground(){
 		super(1);
-        hasTree = new Vector<>(fieldSize);
+        tree = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            hasTree.add(false);
+            tree.add(false);
         }
         this.generateTree();
 	}
 	
     public Ground(Point P){
 		super(1, P);
-        hasTree = new Vector<>(fieldSize);
+        tree = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            hasTree.add(false);
+            tree.add(false);
         }
         this.generateTree();
+        Random random = new Random();
+        direction = random.nextInt(1);
     }
 
-    public boolean isTree(int index){ return hasTree.elementAt(index); }
+    public boolean isTree(int index){ return tree.elementAt(index); }
 
-    public void setTree(int index, boolean _hasTree){ hasTree.setElementAt(_hasTree, index); }
+    public void setTree(int index, boolean _tree){ tree.setElementAt(_tree, index); }
 
     public void generateTree(){
         Random random = new Random();
@@ -44,7 +46,8 @@ public class Ground extends Field{
     }
 
     public void moveField(){
-        boolean temp = hasTree.remove(0);
-        hasTree.add(temp);
+        boolean temp = tree.remove(0);
+        tree.add(temp);
     }
+
 }
