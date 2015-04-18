@@ -29,6 +29,13 @@ public class PointTest extends TestCase {
         assertEquals("error di setOrdinat", 3, instance.getOrdinat());
     }
 
+    public void testSetPoint() throws Exception {
+        Point instance = new Point();
+        instance.setPoint(2,3);
+        assertEquals("error di setPoint", 2, instance.getAbsis());
+        assertEquals("error di setPoint", 3, instance.getOrdinat());
+    }
+
     public void testToString() throws Exception {
         Point instance = new Point(2,3);
         String result = "(" + instance.getAbsis() + ", " + instance.getOrdinat() + ")";

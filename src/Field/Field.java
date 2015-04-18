@@ -10,15 +10,18 @@ import Point.Point;
 public abstract class Field {
     protected int fieldCode;
     protected Point position;
-    
+    protected int fieldSize;
+
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		position = new Point();
+		fieldSize = 7;
 	}
 	
     public Field(int _fieldCode, Point _position){
 		fieldCode = _fieldCode;
 		position = new Point(_position);
+		fieldSize = 7;
 	}
     
     public Point getPosition(){
@@ -33,7 +36,10 @@ public abstract class Field {
     public int getFieldCode(){
         return fieldCode;
     }
-    
+
+	public int getFieldSize() { return fieldSize; }
+
+	public void setFieldSize(int _fieldSize) { fieldSize = _fieldSize; }
     /*public static void main(String[] args){
 		Point P = new Point(1,2);
 		Field F1 = new Ground(P);

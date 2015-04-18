@@ -25,6 +25,6 @@ public class WaterTest extends TestCase {
 
     public void testGetFieldCode() throws Exception {
         Water instance = new Water();
-        assertEquals("error di getFieldCode", 3, instance.getFieldCode());
+        assertEquals("error di getFieldCode", 2, instance.getFieldCode());
     }
 }

@@ -35,7 +35,12 @@ public class Point {
 	public void setOrdinat(int _y){
 		this.y = _y;
 	}
-	
+
+	public void setPoint(int _x, int _y){
+		this.setAbsis(_x);
+		this.setOrdinat(_y);
+	}
+
 	public String toString(){
 		return "(" + x + ", " + y + ")";
 	}
