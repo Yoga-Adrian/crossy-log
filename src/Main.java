@@ -7,7 +7,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
         Random random = new Random();
-        Vector<Object> vector = new Vector<>();
+        Vector<Field> vector = new Vector<>();
 
         for (int i = 0; i < 12; i++) {
             int GroundWater = random.nextInt(2) + 1;
@@ -22,8 +22,14 @@ public class Main {
         }
 
         for(int i=0; i<vector.size(); i++){
-            System.out.println(vector.elementAt(i));
+            System.out.print(vector.elementAt(i));
+            if(vector.elementAt(i).getFieldCode() == 1)
+                System.out.println(" Ground");
+            else
+                System.out.println(" Water");
         }
+
+
 
         Scanner scanner = new Scanner(System.in);
         CommandProcessor Action = new CommandProcessor();

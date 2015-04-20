@@ -17,7 +17,14 @@ public class Ground extends Field{
         }
         this.generateTree();
 	}
-	
+
+    public Ground(final Ground G){
+        super(1);
+        tree = new Vector<>(fieldSize);
+        for(int i=0; i<G.fieldSize; i++){
+            tree.add(G.isTree(i));
+        }
+    }
     public Ground(Point P){
 		super(1, P);
         tree = new Vector<>(fieldSize);
