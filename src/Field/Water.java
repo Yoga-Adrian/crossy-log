@@ -51,5 +51,17 @@ public class Water extends Field {
         boolean temp = log.remove(0);
         log.add(temp);
     }
+
+    @Override
+    public String toString() {
+        String ret = "";
+        for(int i=0; i<log.size(); i++){
+            if(log.elementAt(i))
+                ret += "1 ";
+            else
+                ret += "0 ";
+        }
+        return ret;
+    }
 }
 

@@ -50,4 +50,15 @@ public class Ground extends Field{
         tree.add(temp);
     }
 
+    @Override
+    public String toString() {
+        String ret = "";
+        for(int i=0; i<tree.size(); i++){
+            if(tree.elementAt(i))
+                ret += "1 ";
+            else
+                ret += "0 ";
+        }
+        return ret;
+    }
 }

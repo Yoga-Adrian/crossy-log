@@ -9,9 +9,24 @@ public class CommandProcessor {
     private String currentCommand;
     private Karakter currentKarakter;
 
+    public CommandProcessor(){
+        currentCommand = "";
+        currentKarakter = new Karakter("Doge");
+    }
+
     public CommandProcessor(final Karakter player){
         currentCommand = "";
         currentKarakter = new Karakter(player);
+    }
+
+    public Karakter getCurrentKarakter(){
+        return currentKarakter;
+    }
+
+    public void setCurrentKarakter(Karakter _currentKarakter){
+        currentKarakter.setName(_currentKarakter.getName());
+        currentKarakter.setStatus(_currentKarakter.getStatus());
+        currentKarakter.setCPosition(_currentKarakter.getCPosition());
     }
 
     public String getCurrentCommand(){
@@ -27,18 +42,22 @@ public class CommandProcessor {
             case "MoveRight":{
                 MoveRight action = new MoveRight(currentKarakter);
                 action.execute();
+                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveLeft":{
                 MoveLeft action = new MoveLeft(currentKarakter);
                 action.execute();
+                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveForward":{
                 MoveForward action = new MoveForward(currentKarakter);
                 action.execute();
+                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveBackward":{
                 MoveBackward action = new MoveBackward(currentKarakter);
                 action.execute();
+                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "Load":{
                 Load action = new Load();
@@ -48,9 +67,10 @@ public class CommandProcessor {
                 Save action = new Save();
                 action.execute();
                 break;}
-            case "AllObjectMover":{
-                AllObjectMover action = new AllObjectMover();
-                action.execute();
+            default:{
+                if(!currentCommand.toLowerCase().equals("exit")){
+                    System.out.println("Syntax Error");
+                }
                 break;}
         }
     }
