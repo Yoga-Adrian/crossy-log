@@ -24,9 +24,19 @@ public class Karakter {
 		cPosition = new Point(K.cPosition);
 		Alive = K.Alive;
 	}
-	
+
+	public void setKarakter(Karakter _player){
+		this.setName(_player.getName());
+		this.setStatus(_player.getStatus());
+		this.setCPosition(_player.getCPosition());
+	}
+
 	public String getName(){
 		return Name;
+	}
+
+	public void setName(String _Name){
+		Name = _Name;
 	}
 	
 	public Point getCPosition(){

@@ -11,29 +11,29 @@ import java.util.Vector;
  */
  
 public class Water extends Field {
-    private Vector<Boolean> hasLog;
+    private Vector<Boolean> log;
 
     public Water(){
 		super(2);
-        hasLog = new Vector<>(fieldSize);
+        log = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            hasLog.add(false);
+            log.add(false);
         }
         this.generateLog();
 	}
     
     public Water(Point P){
         super(2, P);
-        hasLog = new Vector<>(fieldSize);
+        log = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            hasLog.setElementAt(false, i);
+            log.add(false);
         }
         this.generateLog();
     }
 
-    public boolean isLog(int index){ return hasLog.elementAt(index); }
+    public boolean isLog(int index){ return log.elementAt(index); }
 
-    public void setLog(int index, boolean _log) { hasLog.setElementAt(_log, index);}
+    public void setLog(int index, boolean _log) { log.setElementAt(_log, index);}
 
     public void generateLog(){
         Random random = new Random();
@@ -48,8 +48,20 @@ public class Water extends Field {
     }
 
     public void moveField(){
-        boolean temp = hasLog.remove(0);
-        hasLog.add(temp);
+        boolean temp = log.remove(0);
+        log.add(temp);
+    }
+
+    @Override
+    public String toString() {
+        String ret = "";
+        for(int i=0; i<log.size(); i++){
+            if(log.elementAt(i))
+                ret += "1 ";
+            else
+                ret += "0 ";
+        }
+        return ret;
     }
 }
 
