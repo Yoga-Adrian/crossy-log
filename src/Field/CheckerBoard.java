@@ -29,24 +29,24 @@ public class CheckerBoard {
 						Water water = new Water();
 						for (int j = 0; j < water.getFieldSize(); j++) {
 							if (water.isLog(j))
-								gui.add(new JLabel(new ImageIcon("Log.jpg")));
+								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Log.jpg")));
 							else
-								gui.add(new JLabel(new ImageIcon("Water.jpg")));
+								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Water.jpg")));
 					}
-					
+
 				} //GroundWater = 2 means Water
 					else {
 						Ground ground = new Ground();
 						for (int j = 0; j < ground.getFieldSize(); j++) {
 							if (ground.isTree(j))
-								gui.add(new JLabel(new ImageIcon("Tree.jpg")));
+								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Tree.jpg")));
 							else
-								gui.add(new JLabel(new ImageIcon("Ground.jpg")));
+								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Ground.jpg")));
 						}
 					}
 				}
 
-                JFrame f = new JFrame("Crossy-Log");
+                JFrame f = new JFrame("Crossy Log");
                 f.add(gui);
                 f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 f.setLocationByPlatform(true);
