@@ -22,13 +22,13 @@ public class CheckerBoard {
 
                 int w = 7;
                 int h = 12;
-                gui.setLayout(new GridLayout(h, w, 2, 2));
+                gui.setLayout(new GridLayout(h, w, 0, 0));
                 for (int i = 0; i < 12; i++) {
 					int GroundWater = random.nextInt(2) + 1;
 					if (GroundWater == 2) {
 						Water water = new Water();
 						for (int j = 0; j < water.getFieldSize(); j++) {
-							if (water.isLog(j))
+							if (water.isItem(j))
 								gui.add(new JLabel(new ImageIcon("Log.jpg")));
 							else
 								gui.add(new JLabel(new ImageIcon("Water.jpg")));
@@ -38,7 +38,7 @@ public class CheckerBoard {
 					else {
 						Ground ground = new Ground();
 						for (int j = 0; j < ground.getFieldSize(); j++) {
-							if (ground.isTree(j))
+							if (ground.isItem(j))
 								gui.add(new JLabel(new ImageIcon("Tree.jpg")));
 							else
 								gui.add(new JLabel(new ImageIcon("Ground.jpg")));

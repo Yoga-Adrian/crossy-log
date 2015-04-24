@@ -5,23 +5,23 @@ import Point.Point;
 
 public class WaterTest extends TestCase {
 
-    public void testIsLog() throws Exception {
+    public void testIsItem() throws Exception {
         Water instance = new Water();
-        instance.setLog(0, true);
-        assertTrue("error di isLog", instance.isLog(0));
+        instance.setItem(0, true);
+        assertTrue("error di isItem", instance.isItem(0));
     }
 
     public void testSetLog() throws Exception {
         Water instance = new Water();
-        instance.setLog(0, true);
-        assertTrue("error di setLog", instance.isLog(0));
+        instance.setItem(0, true);
+        assertTrue("error di setItem", instance.isItem(0));
     }
 
     public void testGenerateLog() throws Exception {
         Water instance = new Water();
         int counter = 0;
         for(int i=0; i<instance.getFieldSize(); i++){
-            if(instance.isLog(i))
+            if(instance.isItem(i))
                 counter++;
         }
         assertTrue("error di generateLog", counter >= 1 && counter <= instance.getFieldSize() / 2);
@@ -29,25 +29,10 @@ public class WaterTest extends TestCase {
 
     public void testMoveField() throws Exception {
         Water instance = new Water();
-        boolean first = instance.isLog(0);
+        boolean first = instance.isItem(0);
         instance.moveField();
-        boolean last = instance.isLog(instance.getFieldSize()-1);
+        boolean last = instance.isItem(instance.getFieldSize()-1);
         assertEquals("error di moveField", first, last);
-    }
-
-    public void testGetPosition() throws Exception {
-        Point P = new Point(2, 3);
-        Water instance = new Water(P);
-        assertEquals("error di getPosition", P.getAbsis(), instance.getPosition().getAbsis());
-        assertEquals("error di getPosition", P.getOrdinat(), instance.getPosition().getOrdinat());
-    }
-
-    public void testSetPoint() throws Exception {
-        Water instance = new Water();
-        Point P = new Point(3, 4);
-        instance.setPoint(P);
-        assertEquals("error di setPosition", P.getAbsis(), instance.getPosition().getAbsis());
-        assertEquals("error di setPosition", P.getOrdinat(), instance.getPosition().getOrdinat());
     }
 
     public void testGetFieldCode() throws Exception {

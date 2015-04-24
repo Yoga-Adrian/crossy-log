@@ -1,8 +1,10 @@
 package Field;
 
 import Point.Point;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.Random;
+import java.util.Vector;
 
 /**
  *
@@ -11,34 +13,26 @@ import java.util.Random;
 
 public abstract class Field {
     protected int fieldCode;
-    protected Point position;
     protected int fieldSize;
     protected int direction;
+    protected Vector<Boolean> item;
 
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
-		position = new Point();
 		fieldSize = 7;
         Random random = new Random();
         direction = random.nextInt(1);
+        item = new Vector<>(fieldSize);
 	}
 	
     public Field(int _fieldCode, Point _position){
 		fieldCode = _fieldCode;
-		position = new Point(_position);
 		fieldSize = 7;
         Random random = new Random();
         direction = random.nextInt(1);
+        item = new Vector<>(fieldSize);
 	}
-    
-    public Point getPosition(){
-        return position;
-    }
-    
-    public void setPoint(Point P){
-        position.setAbsis(P.getAbsis());
-        position.setOrdinat(P.getOrdinat());
-    }
+
     
     public int getFieldCode(){
         return fieldCode;
@@ -47,6 +41,14 @@ public abstract class Field {
 	public int getFieldSize() { return fieldSize; }
 
 	public void setFieldSize(int _fieldSize) { fieldSize = _fieldSize; }
+
+    public abstract void generateRandom();
+
+    public boolean isItem(int index){
+        return item.elementAt(index);
+    }
+
+    public void setItem(int index, boolean _item) { item.setElementAt(_item, index);}
 
 }
 

@@ -32,7 +32,7 @@ public class Main{
             if (GroundWater == 2) {
                 Water water = new Water();
                 for (int j = 0; j < water.getFieldSize(); j++) {
-                    if (water.isLog(j))
+                    if (water.isItem(j))
                         System.out.print("1 ");
                     else
                         System.out.print("0 ");
@@ -42,7 +42,7 @@ public class Main{
             else {
                 Ground ground = new Ground();
                 for (int j = 0; j < ground.getFieldSize(); j++) {
-                    if (ground.isTree(j))
+                    if (ground.isItem(j))
                         System.out.print("0 ");
                     else
                         System.out.print("1 ");

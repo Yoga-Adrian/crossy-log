@@ -11,52 +11,47 @@ import java.util.Vector;
  */
  
 public class Water extends Field {
-    private Vector<Boolean> log;
-
     public Water(){
 		super(2);
-        log = new Vector<>(fieldSize);
+        item = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            log.add(false);
+            item.add(false);
         }
-        this.generateLog();
+        this.generateRandom();
 	}
     
     public Water(Point P){
         super(2, P);
-        log = new Vector<>(fieldSize);
+        item = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
-            log.add(false);
+            item.add(false);
         }
-        this.generateLog();
+        this.generateRandom();
     }
 
-    public boolean isLog(int index){ return log.elementAt(index); }
 
-    public void setLog(int index, boolean _log) { log.setElementAt(_log, index);}
-
-    public void generateLog(){
+    public void generateRandom(){
         Random random = new Random();
         int numOfTrees = random.nextInt(fieldSize/2) + 1;
         while(numOfTrees!=0){
             int randomPosition = random.nextInt(fieldSize);
-            if(!isLog(randomPosition)){
-                this.setLog(randomPosition, true);
+            if(!isItem(randomPosition)){
+                this.setItem(randomPosition, true);
                 numOfTrees--;
             }
         }
     }
 
     public void moveField(){
-        boolean temp = log.remove(0);
-        log.add(temp);
+        boolean temp = item.remove(0);
+        item.add(temp);
     }
 
     @Override
     public String toString() {
         String ret = "";
-        for(int i=0; i<log.size(); i++){
-            if(log.elementAt(i))
+        for(int i=0; i<item.size(); i++){
+            if(item.elementAt(i))
                 ret += "1 ";
             else
                 ret += "0 ";
