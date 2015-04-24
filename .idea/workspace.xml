@@ -10,13 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tubes 3/Field/GroundTest.class" afterPath="$PROJECT_DIR$/out/production/Tubes 3/Field/GroundTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tubes 3/Field/Water.class" afterPath="$PROJECT_DIR$/out/production/Tubes 3/Field/Water.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tubes 3/Field/WaterTest.class" afterPath="$PROJECT_DIR$/out/production/Tubes 3/Field/WaterTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/CheckerBoard.java" afterPath="$PROJECT_DIR$/src/Field/CheckerBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/Field.java" afterPath="$PROJECT_DIR$/src/Field/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/Ground.java" afterPath="$PROJECT_DIR$/src/Field/Ground.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/GroundTest.java" afterPath="$PROJECT_DIR$/src/Field/GroundTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/Main.java" afterPath="$PROJECT_DIR$/src/Field/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/Water.java" afterPath="$PROJECT_DIR$/src/Field/Water.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/WaterTest.java" afterPath="$PROJECT_DIR$/src/Field/WaterTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tubes 3.iws" />
@@ -612,7 +605,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429868887384</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gatau update apaan tibatiba bisa">
+      <created>1429895982630</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1429895982630</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -686,7 +685,8 @@
     <MESSAGE value="WaterTest" />
     <MESSAGE value="Baru" />
     <MESSAGE value="Move" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move" />
+    <MESSAGE value="gatau update apaan tibatiba bisa" />
+    <option name="LAST_COMMIT_MESSAGE" value="gatau update apaan tibatiba bisa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
