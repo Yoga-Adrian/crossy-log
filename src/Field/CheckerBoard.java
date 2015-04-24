@@ -29,9 +29,9 @@ public class CheckerBoard {
 						Water water = new Water();
 						for (int j = 0; j < water.getFieldSize(); j++) {
 							if (water.isLog(j))
-								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Log.jpg")));
+								gui.add(new JLabel(new ImageIcon("Log.jpg")));
 							else
-								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Water.jpg")));
+								gui.add(new JLabel(new ImageIcon("Water.jpg")));
 					}
 
 				} //GroundWater = 2 means Water
@@ -39,9 +39,9 @@ public class CheckerBoard {
 						Ground ground = new Ground();
 						for (int j = 0; j < ground.getFieldSize(); j++) {
 							if (ground.isTree(j))
-								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Tree.jpg")));
+								gui.add(new JLabel(new ImageIcon("Tree.jpg")));
 							else
-								gui.add(new JLabel(new ImageIcon("D:\\Levanji's Data\\Image\\Ground.jpg")));
+								gui.add(new JLabel(new ImageIcon("Ground.jpg")));
 						}
 					}
 				}
