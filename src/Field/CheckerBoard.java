@@ -23,15 +23,19 @@ public class CheckerBoard {
                 int w = 7;
                 int h = 12;
                 gui.setLayout(new GridLayout(h, w, 0, 0));
+				JLabel labels[] = new JLabel[(h*w)];
                 for (int i = 0; i < 12; i++) {
 					int GroundWater = random.nextInt(2) + 1;
 					if (GroundWater == 2) {
 						Water water = new Water();
 						for (int j = 0; j < water.getFieldSize(); j++) {
 							if (water.isItem(j))
-								gui.add(new JLabel(new ImageIcon("Log.jpg")));
+
+								{labels[i*7+j]=(new JLabel(new ImageIcon("Log.jpg")));
+								gui.add(labels[i*7+j]);}
 							else
-								gui.add(new JLabel(new ImageIcon("Water.jpg")));
+							{labels[i*7+j]=(new JLabel(new ImageIcon("Water.jpg")));
+								gui.add(labels[i*7+j]);}
 					}
 
 				} //GroundWater = 2 means Water
@@ -39,13 +43,15 @@ public class CheckerBoard {
 						Ground ground = new Ground();
 						for (int j = 0; j < ground.getFieldSize(); j++) {
 							if (ground.isItem(j))
-								gui.add(new JLabel(new ImageIcon("Tree.jpg")));
+							{labels[i*7+j]=(new JLabel(new ImageIcon("Tree.jpg")));
+							gui.add(labels[i*7+j]);}
 							else
-								gui.add(new JLabel(new ImageIcon("Ground.jpg")));
+							{labels[i*7+j]=(new JLabel(new ImageIcon("Ground.jpg")));
+							gui.add(labels[i*7+j]);}
 						}
 					}
 				}
-
+				//gui.add(labels[1]);
                 JFrame f = new JFrame("Crossy Log");
                 f.add(gui);
                 f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
