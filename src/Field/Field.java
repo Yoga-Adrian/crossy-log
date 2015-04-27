@@ -14,14 +14,14 @@ import java.util.Vector;
 public abstract class Field {
     protected int fieldCode;
     protected int fieldSize;
-    protected int direction;
+    static protected boolean direction=true;
     protected Vector<Boolean> item;
 
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
-        direction = random.nextInt(1);
+        direction = !direction;
         item = new Vector<>(fieldSize);
 	}
 	
@@ -29,11 +29,11 @@ public abstract class Field {
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
-        direction = random.nextInt(1);
+        direction= !direction;
         item = new Vector<>(fieldSize);
 	}
 
-    
+    public boolean getDirection(){return direction;}
     public int getFieldCode(){
         return fieldCode;
     }

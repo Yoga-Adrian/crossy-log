@@ -44,9 +44,9 @@ import javax.swing.*;
 
                 int nextX = getLocation().x + (deltaX * directionX);
 
-                if (nextX < 0)
+                if (nextX < 50)
                 {
-                    nextX = parent.getSize().width - getSize().width;
+                    nextX = 350;
                     directionX *= 1;
                 }
 
@@ -85,9 +85,19 @@ import javax.swing.*;
                             for (int j=0;j <water.getFieldSize();j++)
                             {
                                 if (water.isItem(j))
-                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Log.jpg") );
+                                {
+                                    if (water.getDirection())
+                                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Log.jpg") );
+                                    else
+                                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, -1, 0, 500,"Log.jpg") );
+                                }
                                 else
-                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Water.jpg") );
+                                {
+                                    if(water.getDirection())
+                                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Water.jpg") );
+                                    else
+                                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, -1, 0, 500,"Water.jpg") );
+                                }
                             }
                         }
                         else {

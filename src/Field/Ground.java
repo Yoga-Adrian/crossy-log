@@ -28,7 +28,7 @@ public class Ground extends Field{
         }
         this.generateRandom();
         Random random = new Random();
-        direction = random.nextInt(1);
+
     }
 
     public void generateRandom(){

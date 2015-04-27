@@ -32,7 +32,7 @@ public class Water extends Field {
 
     public void generateRandom(){
         Random random = new Random();
-        int numOfTrees = random.nextInt(fieldSize/2) + 1;
+        int numOfTrees = random.nextInt(fieldSize/2) + 2;
         while(numOfTrees!=0){
             int randomPosition = random.nextInt(fieldSize);
             if(!isItem(randomPosition)){
