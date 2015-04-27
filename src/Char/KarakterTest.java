@@ -23,6 +23,11 @@ public class KarakterTest extends TestCase {
         assertEquals("error di getCPosition", result.getOrdinat(), instance.getCPosition().getOrdinat());
     }
 
+    public void testGetCDirection() throws Exception {
+        Karakter instance = new Karakter();
+        assertEquals("error di getCDirection()", 0, instance.getCDirection());
+    }
+
     public void testGetStatus() throws Exception {
         Karakter instance = new Karakter();
         assertTrue("error di getStatus()", instance.getStatus());
@@ -34,6 +39,12 @@ public class KarakterTest extends TestCase {
         instance.setCPosition(P);
         assertEquals("error di setCPosition", P.getAbsis(), instance.getCPosition().getAbsis());
         assertEquals("error di setCPosition", P.getOrdinat(), instance.getCPosition().getOrdinat());
+    }
+
+    public void testSetCDirection() throws Exception {
+        Karakter instance = new Karakter();
+        instance.setCDirection(1);
+        assertEquals("error di setStatus()", 1, instance.getCDirection());
     }
 
     public void testSetStatus() throws Exception {
@@ -48,4 +59,8 @@ public class KarakterTest extends TestCase {
         instance.PrintKarakter();
         //assertEquals("error di PrintKarakter", result, );
     }
+
+
+
+
 }
