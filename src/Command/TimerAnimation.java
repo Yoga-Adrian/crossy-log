@@ -1,6 +1,11 @@
 package Command;
+import Field.*;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Vector;
 import javax.swing.*;
 
 /**
@@ -18,16 +23,15 @@ import javax.swing.*;
                     int startX, int startY,
                     int deltaX, int deltaY,
                     int directionX, int directionY,
-                    int delay)
+                    int delay, String gambar)
             {
                 this.deltaX = deltaX;
                 this.deltaY = deltaY;
                 this.directionX = directionX;
                 this.directionY = directionY;
 
-                setIcon( new ImageIcon("Water.jpg") );
-//      setIcon( new ImageIcon("copy16.gif") );
-                setSize( getPreferredSize() );
+                setIcon( new ImageIcon(gambar) );
+                setSize(50, 50);
                 setLocation(startX, startY);
                 new javax.swing.Timer(delay, this).start();
             }
@@ -42,33 +46,21 @@ import javax.swing.*;
 
                 if (nextX < 0)
                 {
-                    nextX = 0;
-                    directionX *= -1;
+                    nextX = parent.getSize().width - getSize().width;
+                    directionX *= 1;
                 }
 
-                if ( nextX + getSize().width > parent.getSize().width)
+                if ( nextX > 350)
                 {
-                    nextX = parent.getSize().width - getSize().width;
-                    directionX *= -1;
+                    nextX =50;
+                    directionX *= 1;
                 }
 
                 //  Determine next Y position
 
                 int nextY = getLocation().y + (deltaY * directionY);
 
-                if (nextY < 0)
-                {
-                    nextY = 0;
-                    directionY *= -1;
-                }
 
-                if ( nextY + getSize().height > parent.getSize().height)
-                {
-                    nextY = parent.getSize().height - getSize().height;
-                    directionY *= -1;
-                }
-
-                //  Move the label
 
                 setLocation(nextX, nextY);
             }
@@ -81,15 +73,63 @@ import javax.swing.*;
                 frame.setContentPane(panel);
                 frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
                 frame.getContentPane().setLayout(null);
-//      frame.getContentPane().add( new TimerAnimation(10, 10, 2, 3, 1, 1, 10) );
-                frame.getContentPane().add( new TimerAnimation(300, 100, 3, 2, -1, 1, 20) );
-//      frame.getContentPane().add( new TimerAnimation(0, 000, 5, 0, 1, 1, 20) );
-                frame.getContentPane().add( new TimerAnimation(0, 200, 5, 0, 1, 1, 80) );
-                frame.setSize(800, 800);
+
+                    Random random = new Random();
+                    Vector<Field> vector = new Vector<>();
+
+                    for (int i = 0; i < 12; i++) {
+                        int GroundWater = random.nextInt(2) + 1;
+                        if (GroundWater == 2) {
+                            Water water = new Water();
+                            vector.add(water);
+                            for (int j=0;j <water.getFieldSize();j++)
+                            {
+                                if (water.isItem(j))
+                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Log.jpg") );
+                                else
+                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 1, 0, 500,"Water.jpg") );
+                            }
+                        }
+                        else {
+                            Ground ground = new Ground();
+                            vector.add(ground);
+                            for (int j=0;j <ground.getFieldSize();j++)
+                            {
+                                if (ground.isItem(j))
+                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 0, 0, 500,"Tree.jpg") );
+                                else
+                                    frame.getContentPane().add( new TimerAnimation((j+1)*50, (i+1)*50, 50, 0, 0, 0, 500,"Ground.jpg") );
+                            }
+                        }
+                    }
+
+                    for(int i=0; i<vector.size(); i++){
+                        System.out.print(vector.elementAt(i));
+                        if(vector.elementAt(i).getFieldCode() == 1)
+                            System.out.println(" Ground");
+                        else
+                            System.out.println(" Water");
+                    }
+
+
+
+/*                    Scanner scanner = new Scanner(System.in);
+                    CommandProcessor Action = new CommandProcessor();
+                    String command = "";
+                    command = scanner.nextLine();
+                    while(!command.toLowerCase().equals("exit")){
+                        Action.setCurrentCommand(command);
+                        Action.run();
+                        System.out.println(Action.getCurrentKarakter().getCPosition());
+                        command = scanner.nextLine();
+                    }
+  */
+
+
+                frame.setSize(450,700);
                 frame.setLocationRelativeTo( null );
                 frame.setVisible(true);
-//      frame.getContentPane().add( new TimerAnimation(10, 10, 2, 3, 1, 1, 10) );
-//      frame.getContentPane().add( new TimerAnimation(10, 10, 3, 0, 1, 1, 10) );
+
             }
         }
 
