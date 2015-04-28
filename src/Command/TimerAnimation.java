@@ -91,59 +91,7 @@ import javax.swing.*;
                 setLocation(nextX, nextY);
             }
 
-    public static void main(String[] args){
-        Karakter Doge = new Karakter("Doge");
 
-        Point playerPosition = new Point(4,0);
-        Doge.setCPosition(playerPosition);
-        JPanel panel = new JPanel();
-        JFrame frame = new JFrame();
-        frame.addKeyListener(new InputHandler());
-
-        Random random = new Random();
-        Vector<Field> vector = new Vector<>();
-
-        for (int i = 0; i < 12; i++) {
-            int GroundWater = random.nextInt(2) + 1;
-            if (GroundWater == 2) {
-                Water water = new Water();
-                vector.add(water);
-                vector.elementAt(i).start();
-                for (int j=0;j <water.getFieldSize();j++)
-                {
-                    if (water.isItem(j))
-                    {
-                        if (water.getDirection())
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Log.jpg") );
-                        else
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Log.jpg") );
-                    }
-                    else
-                    {
-                        if(water.getDirection())
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Water.jpg") );
-                        else
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Water.jpg") );
-                    }
-                }
-            }
-            else {
-                Ground ground = new Ground();
-                vector.add(ground);
-                for (int j=0;j <ground.getFieldSize();j++)
-                {
-                    if (ground.isItem(j))
-                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Tree.jpg") );
-                    else
-                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Ground.jpg") );
-                }
-            }
-        }
-
-        frame.setSize(450,700);
-        frame.setLocationRelativeTo( null );
-        frame.setVisible(true);
-    }
 }
 
 
