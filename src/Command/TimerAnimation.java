@@ -69,7 +69,7 @@ import javax.swing.*;
             {
                 JPanel panel = new JPanel();
                 JFrame frame = new JFrame();
-             
+
                 frame.setContentPane(panel);
                 frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
                 frame.getContentPane().setLayout(null);
