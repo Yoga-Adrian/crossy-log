@@ -1,5 +1,6 @@
 package Field;
 
+import Command.karakterthread;
 import Point.Point;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
@@ -12,15 +13,17 @@ import java.util.Vector;
  */
 
 public abstract class Field extends Thread {
+    static protected boolean direction=true;
     protected int fieldCode;
     protected int fieldSize;
-    static protected boolean direction=true;
+    protected boolean rdirection;
     protected Vector<Boolean> item;
 
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
+        rdirection=direction;
         direction = !direction;
         item = new Vector<>(fieldSize);
 	}
@@ -29,6 +32,7 @@ public abstract class Field extends Thread {
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
+        rdirection=direction;
         direction= !direction;
         item = new Vector<>(fieldSize);
 	}
@@ -36,7 +40,9 @@ public abstract class Field extends Thread {
     public void run()
     {
         while (true) {
-            this.moveField(direction);
+
+                this.moveField(rdirection);
+
             try {
                 sleep (1000);
             } catch (InterruptedException e) {
@@ -45,7 +51,7 @@ public abstract class Field extends Thread {
         }
     }
 
-    public boolean getDirection(){return direction;}
+    public boolean getDirection(){return rdirection;}
 
     public int getFieldCode(){
         return fieldCode;
