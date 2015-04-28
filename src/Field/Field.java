@@ -39,7 +39,6 @@ public abstract class Field extends Thread {
                 this.moveField(direction);
                 try {
                     sleep (1000);
-                    System.out.println(this);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
