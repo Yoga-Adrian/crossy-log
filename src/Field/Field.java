@@ -46,6 +46,7 @@ public abstract class Field extends Thread {
     }
 
     public boolean getDirection(){return direction;}
+
     public int getFieldCode(){
         return fieldCode;
     }

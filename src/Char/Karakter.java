@@ -1,8 +1,12 @@
 package Char;
 
+import Command.karakterthread;
+import Field.Ground;
+import Field.Water;
 import Point.Point;
 
 import java.awt.event.KeyEvent;
+import java.util.Random;
 
 
 public class Karakter {
@@ -80,10 +84,18 @@ public class Karakter {
 	public void keyReleased(int key){
 		switch(key) {
 			case KeyEvent.VK_UP:
-				cPosition.setOrdinat(cPosition.getOrdinat()+1);
+				karakterthread.vector.remove(0);
+				Random random = new Random();
+				if(random.nextInt(2)+1 == 1){
+					Ground ground = new Ground();
+					karakterthread.vector.add(ground);
+				} else{
+					Water water = new Water();
+					karakterthread.vector.add(water);
+				}
+				karakterthread.moveMap();
 				break;
 			case KeyEvent.VK_DOWN:
-				cPosition.setOrdinat(cPosition.getOrdinat()-1);
 				break;
 			case KeyEvent.VK_RIGHT:
 				if(cPosition.getAbsis() == (fieldSize-1)){
@@ -94,7 +106,7 @@ public class Karakter {
 				break;
 			case KeyEvent.VK_LEFT:
 				if(cPosition.getAbsis() == 0){
-					cPosition.setAbsis(fieldSize-1);
+					cPosition.setAbsis(fieldSize - 1);
 				} else {
 					cPosition.setAbsis(cPosition.getAbsis()-1);
 				}
