@@ -33,7 +33,7 @@ public class karakterthread extends JLabel implements ActionListener {
         this.deltaY = deltaY;
         this.directionX = directionX;
         this.directionY = directionY;
-        ;
+
         player = new Karakter("Doge");
 
         Point playerPosition = new Point(3,0);
@@ -51,6 +51,7 @@ public class karakterthread extends JLabel implements ActionListener {
         panel.setLayout(null);
         for (int i = 0; i < 12; i++) {
             if (vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
+
                 for (int j=0;j <vector.elementAt(i).getFieldSize();j++)
                 {
                     if (vector.elementAt(i).isItem(j))

@@ -92,6 +92,7 @@ public class Karakter {
 				} else{
 					Water water = new Water();
 					karakterthread.vector.add(water);
+					karakterthread.vector.elementAt(11).start();
 				}
 				karakterthread.moveMap();
 				break;

@@ -63,8 +63,8 @@ public abstract class Field extends Thread {
 
     public abstract void generateRandom();
 
-    public void moveField(boolean direction){
-        if(direction) {
+    public void moveField(boolean rdirection){
+        if(rdirection) {
             boolean temp = item.remove(0);
             item.add(temp);
         } else {
