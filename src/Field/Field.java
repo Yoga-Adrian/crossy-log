@@ -11,7 +11,7 @@ import java.util.Vector;
  * @author yoga
  */
 
-public abstract class Field {
+public abstract class Field extends Thread {
     protected int fieldCode;
     protected int fieldSize;
     static protected boolean direction=true;
@@ -33,6 +33,19 @@ public abstract class Field {
         item = new Vector<>(fieldSize);
 	}
 
+        public void run()
+        {
+            while (true) {
+                this.moveField(direction);
+                try {
+                    sleep (1000);
+                    System.out.println(this);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     public boolean getDirection(){return direction;}
     public int getFieldCode(){
         return fieldCode;
@@ -43,6 +56,16 @@ public abstract class Field {
 	public void setFieldSize(int _fieldSize) { fieldSize = _fieldSize; }
 
     public abstract void generateRandom();
+
+    public void moveField(boolean direction){
+        if(direction) {
+            boolean temp = item.remove(0);
+            item.add(temp);
+        } else {
+            boolean temp = item.remove(this.getFieldSize()-1);
+            item.add(0, temp);
+        }
+    }
 
     public boolean isItem(int index){
         return item.elementAt(index);

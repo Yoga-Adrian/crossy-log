@@ -42,11 +42,6 @@ public class Water extends Field {
         }
     }
 
-    public void moveField(){
-        boolean temp = item.remove(0);
-        item.add(temp);
-    }
-
     @Override
     public String toString() {
         String ret = "";
