@@ -33,17 +33,17 @@ public abstract class Field extends Thread {
         item = new Vector<>(fieldSize);
 	}
 
-        public void run()
-        {
-            while (true) {
-                this.moveField(direction);
-                try {
-                    sleep (1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+    public void run()
+    {
+        while (true) {
+            this.moveField(direction);
+            try {
+                sleep (1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
+    }
 
     public boolean getDirection(){return direction;}
     public int getFieldCode(){
