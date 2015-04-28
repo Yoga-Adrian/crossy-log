@@ -188,6 +188,17 @@ public class karakterthread extends JLabel implements ActionListener {
             }
             player.setKarakter(action.getCurrentKarakter());
             System.out.println(player.getCPosition());
+            if (vector.elementAt(0).getFieldCode() == 1){
+                if (vector.elementAt(0).isItem(player.getCPosition().getAbsis())){
+                    player.setStatus(false);
+                }
+            }
+            else{ // Field Code = 2
+                if (!vector.elementAt(0).isItem(player.getCPosition().getAbsis())){
+                    player.setStatus(false);
+                }
+            }
+            System.out.println(player.getStatus());
         }
     }
 
