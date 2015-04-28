@@ -1,6 +1,10 @@
 package Command;
 
 import Char.Karakter;
+import Point.Point;
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by omarcelh on 13-Apr-15.

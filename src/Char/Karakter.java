@@ -2,12 +2,15 @@ package Char;
 
 import Point.Point;
 
+import java.awt.event.KeyEvent;
+
 
 public class Karakter {
 	private String Name;
 	private Point cPosition;
 	private int cDirection;
 	private boolean Alive;
+	private final int fieldSize = 7;
 
 	public Karakter(){
 		Name = "Doge";
@@ -72,6 +75,31 @@ public class Karakter {
 		System.out.println(getCPosition());
 		System.out.println(getCDirection());
 		System.out.println(getStatus());
+	}
+
+	public void keyReleased(int key){
+		switch(key) {
+			case KeyEvent.VK_UP:
+				cPosition.setOrdinat(cPosition.getOrdinat()+1);
+				break;
+			case KeyEvent.VK_DOWN:
+				cPosition.setOrdinat(cPosition.getOrdinat()-1);
+				break;
+			case KeyEvent.VK_RIGHT:
+				if(cPosition.getAbsis() == (fieldSize-1)){
+					cPosition.setAbsis(0);
+				} else {
+					cPosition.setAbsis(cPosition.getAbsis()+1);
+				}
+				break;
+			case KeyEvent.VK_LEFT:
+				if(cPosition.getAbsis() == 0){
+					cPosition.setAbsis(fieldSize-1);
+				} else {
+					cPosition.setAbsis(cPosition.getAbsis()-1);
+				}
+				break;
+		}
 	}
 
 }

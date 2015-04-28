@@ -30,7 +30,6 @@ public class WaterTest extends TestCase {
     public void testMoveField() throws Exception {
         Water instance = new Water();
         boolean first = instance.isItem(0);
-        instance.moveField(instance.getDirection());
         boolean last = instance.isItem(instance.getFieldSize()-1);
         assertEquals("error di moveField", first, last);
     }

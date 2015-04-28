@@ -1,5 +1,7 @@
 package Command;
+import Char.Karakter;
 import Field.*;
+import Point.Point;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -14,10 +16,37 @@ import javax.swing.*;
 
         public class TimerAnimation extends JLabel implements ActionListener
         {
-            int deltaX = 2;
-            int deltaY = 3;
-            int directionX = 1;
-            int directionY = 1;
+            private int deltaX = 2;
+            private int deltaY = 3;
+            private int directionX = 1;
+            private int directionY = 1;
+            private static Karakter player;
+
+            private static class InputHandler extends KeyAdapter {
+                public void keyReleased(KeyEvent e){
+                    CommandProcessor action = new CommandProcessor(player);
+                    switch(e.getKeyCode()){
+                        case KeyEvent.VK_LEFT:
+                            action.setCurrentCommand("MoveLeft");
+                            action.run();
+                            break;
+                        case KeyEvent.VK_RIGHT:
+                            action.setCurrentCommand("MoveRight");
+                            action.run();
+                            break;
+                        case KeyEvent.VK_UP:
+                            action.setCurrentCommand("MoveForward");
+                            action.run();
+                            break;
+                        case KeyEvent.VK_DOWN:
+                            action.setCurrentCommand("MoveBackward");
+                            action.run();
+                            break;
+                    }
+                    player.setKarakter(action.getCurrentKarakter());
+                    System.out.println(player.getCPosition());
+                }
+            }
 
             public TimerAnimation(
                     int startX, int startY,
@@ -29,6 +58,7 @@ import javax.swing.*;
                 this.deltaY = deltaY;
                 this.directionX = directionX;
                 this.directionY = directionY;
+                player = new Karakter("Doge");
 
                 setIcon( new ImageIcon(gambar) );
                 setSize(50, 50);
@@ -59,22 +89,22 @@ import javax.swing.*;
                 //  Determine next Y position
 
                 int nextY = getLocation().y + (deltaY * directionY);
-
-
-
                 setLocation(nextX, nextY);
             }
 
-            public static void main(String[] args)
-            {
-                JPanel panel = new JPanel();
-                JFrame frame = new JFrame();
+    public static void main(String[] args){
+        Karakter Doge = new Karakter("Doge");
 
-                frame.setContentPane(panel);
-                frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-                frame.getContentPane().setLayout(null);
-                Random random = new Random();
-                Vector<Field> vector = new Vector<>();
+        Point playerPosition = new Point(4,0);
+        Doge.setCPosition(playerPosition);
+        JPanel panel = new JPanel();
+        JFrame frame = new JFrame();
+        frame.addKeyListener(new InputHandler());
+
+
+
+        Random random = new Random();
+        Vector<Field> vector = new Vector<>();
 
                 for (int i = 0; i < 12; i++) {
                     int GroundWater = random.nextInt(2) + 1;
