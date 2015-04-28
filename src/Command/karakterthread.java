@@ -82,7 +82,9 @@ public class karakterthread extends JLabel implements ActionListener {
     }
 
     public static void moveMap(){
+
         JPanel panel = new JPanel();
+        panel.setLayout(null);
         for (int i = 0; i < 12; i++) {
             if (vector.elementAt(i).getClass().getSimpleName().equals("Ground")) {
                 for (int j=0;j <vector.elementAt(i).getFieldSize();j++)
@@ -113,7 +115,9 @@ public class karakterthread extends JLabel implements ActionListener {
                 }
             }
         }
+       frame.setVisible(false);
         frame.setContentPane(panel);
+        frame.setVisible(true);
     }
 
     public static void main(String[] args){
