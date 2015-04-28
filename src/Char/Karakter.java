@@ -84,15 +84,6 @@ public class Karakter {
 	public void keyReleased(int key){
 		switch(key) {
 			case KeyEvent.VK_UP:
-				karakterthread.vector.remove(0);
-				Random random = new Random();
-				if(random.nextInt(2)+1 == 1){
-					Ground ground = new Ground();
-					karakterthread.vector.add(ground);
-				} else{
-					Water water = new Water();
-					karakterthread.vector.add(water);
-				}
 				karakterthread.moveMap();
 				break;
 			case KeyEvent.VK_DOWN:

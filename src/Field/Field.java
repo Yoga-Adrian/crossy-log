@@ -13,17 +13,15 @@ import java.util.Vector;
  */
 
 public abstract class Field extends Thread {
-    static protected boolean direction=true;
     protected int fieldCode;
     protected int fieldSize;
-    protected boolean rdirection;
+    static protected boolean direction=true;
     protected Vector<Boolean> item;
 
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
-        rdirection=direction;
         direction = !direction;
         item = new Vector<>(fieldSize);
 	}
@@ -32,7 +30,6 @@ public abstract class Field extends Thread {
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
-        rdirection=direction;
         direction= !direction;
         item = new Vector<>(fieldSize);
 	}
@@ -40,8 +37,11 @@ public abstract class Field extends Thread {
     public void run()
     {
         while (true) {
-
-                this.moveField(rdirection);
+            for(int i=0; i<12; i++) {
+                if(karakterthread.vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
+                    karakterthread.vector.elementAt(i).moveField(direction);
+                }
+            }
 
             try {
                 sleep (1000);
@@ -51,7 +51,7 @@ public abstract class Field extends Thread {
         }
     }
 
-    public boolean getDirection(){return rdirection;}
+    public boolean getDirection(){return direction;}
 
     public int getFieldCode(){
         return fieldCode;
