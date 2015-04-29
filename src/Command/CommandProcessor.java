@@ -11,28 +11,11 @@ import java.awt.event.KeyEvent;
  */
 public class CommandProcessor {
     private String currentCommand;
-    private Karakter currentKarakter;
 
     public CommandProcessor(){
         currentCommand = "";
-        currentKarakter = new Karakter("Doge");
     }
-
-    public CommandProcessor(final Karakter player){
-        currentCommand = "";
-        currentKarakter = new Karakter(player);
-    }
-
-    public Karakter getCurrentKarakter(){
-        return currentKarakter;
-    }
-
-    public void setCurrentKarakter(Karakter _currentKarakter){
-        currentKarakter.setName(_currentKarakter.getName());
-        currentKarakter.setStatus(_currentKarakter.getStatus());
-        currentKarakter.setCPosition(_currentKarakter.getCPosition());
-    }
-
+    
     public String getCurrentCommand(){
         return currentCommand;
     }
@@ -44,31 +27,19 @@ public class CommandProcessor {
     public void run(){
         switch(currentCommand){
             case "MoveRight":{
-                MoveRight action = new MoveRight(currentKarakter);
+                MoveRight action = new MoveRight();
                 action.execute();
-                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveLeft":{
-                MoveLeft action = new MoveLeft(currentKarakter);
+                MoveLeft action = new MoveLeft();
                 action.execute();
-                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveForward":{
-                MoveForward action = new MoveForward(currentKarakter);
+                MoveForward action = new MoveForward();
                 action.execute();
-                this.setCurrentKarakter(action.getCurrentPlayer());
                 break;}
             case "MoveBackward":{
-                MoveBackward action = new MoveBackward(currentKarakter);
-                action.execute();
-                this.setCurrentKarakter(action.getCurrentPlayer());
-                break;}
-            case "Load":{
-                Load action = new Load();
-                action.execute();
-                break;}
-            case "Save":{
-                Save action = new Save();
+                MoveBackward action = new MoveBackward();
                 action.execute();
                 break;}
             default:{

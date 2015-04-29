@@ -34,19 +34,8 @@ public class WaterTest extends TestCase {
         assertEquals("error di moveField", first, last);
     }
 
-    public void testGetFieldCode() throws Exception {
-        Water instance = new Water();
-        assertEquals("error di getFieldCode", 1, instance.getFieldCode());
-    }
-
     public void testGetFieldSize() throws Exception {
         Water instance = new Water();
         assertEquals("error di getFieldSize", instance.getFieldSize(), 7);
-    }
-
-    public void testSetFieldSize() throws Exception {
-        Water instance = new Water();
-        instance.setFieldSize(11);
-        assertEquals("error di getFieldSize", instance.getFieldSize(), 11);
     }
 }

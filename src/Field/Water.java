@@ -1,7 +1,5 @@
 package Field;
 
-import Point.Point;
-
 import java.util.Random;
 import java.util.Vector;
 
@@ -12,23 +10,13 @@ import java.util.Vector;
  
 public class Water extends Field {
     public Water(){
-		super(2);
+		super();
         item = new Vector<>(fieldSize);
         for(int i=0; i<fieldSize; i++){
             item.add(false);
         }
         this.generateRandom();
 	}
-    
-    public Water(Point P){
-        super(2, P);
-        item = new Vector<>(fieldSize);
-        for(int i=0; i<fieldSize; i++){
-            item.add(false);
-        }
-        this.generateRandom();
-    }
-
 
     public void generateRandom(){
         Random random = new Random();
@@ -40,18 +28,6 @@ public class Water extends Field {
                 numOfTrees--;
             }
         }
-    }
-
-    @Override
-    public String toString() {
-        String ret = "";
-        for(int i=0; i<item.size(); i++){
-            if(item.elementAt(i))
-                ret += "1 ";
-            else
-                ret += "0 ";
-        }
-        return ret;
     }
 }
 

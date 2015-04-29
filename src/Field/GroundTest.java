@@ -30,19 +30,8 @@ public class GroundTest extends TestCase {
         assertTrue("error di generateTree", counter >=1 && counter <= instance.getFieldSize()/2);
     }
 
-    public void testGetFieldCode() throws Exception {
-        Ground instance = new Ground();
-        assertEquals("error di getFieldCode", 1, instance.getFieldCode());
-    }
-
     public void testGetFieldSize() throws Exception {
         Ground instance = new Ground();
         assertEquals("error di getFieldSize", instance.getFieldSize(), 7);
-    }
-
-    public void testSetFieldSize() throws Exception {
-        Ground instance = new Ground();
-        instance.setFieldSize(11);
-        assertEquals("error di getFieldSize", instance.getFieldSize(), 11);
     }
 }

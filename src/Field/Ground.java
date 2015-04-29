@@ -1,13 +1,10 @@
 package Field;
 
-import Point.Point;
-
 import java.util.Random;
-
 
 public class Ground extends Field{
     public Ground(){
-		super(1);
+		super();
         for(int i=0; i<fieldSize; i++){
             item.add(false);
         }
@@ -15,20 +12,10 @@ public class Ground extends Field{
 	}
 
     public Ground(final Ground G){
-        super(1);
+        super();
         for(int i=0; i<G.fieldSize; i++){
             item.add(G.isItem(i));
         }
-    }
-
-    public Ground(Point P){
-		super(1, P);
-        for(int i=0; i<fieldSize; i++){
-            item.add(false);
-        }
-        this.generateRandom();
-        Random random = new Random();
-
     }
 
     public void generateRandom(){
@@ -41,17 +28,5 @@ public class Ground extends Field{
                 numOfItems--;
             }
         }
-    }
-
-    @Override
-    public String toString() {
-        String ret = "";
-        for(int i=0; i<item.size(); i++){
-            if(item.elementAt(i))
-                ret += "1 ";
-            else
-                ret += "0 ";
-        }
-        return ret;
     }
 }
