@@ -1,7 +1,8 @@
 package Command;
 
 /**
- * Created by omarcelh on 13-Apr-15.
+ * interface Command
+ * memiliki method yang harus diimplementasi oleh seluruh child nya
  */
 public interface Command {
     public void execute();

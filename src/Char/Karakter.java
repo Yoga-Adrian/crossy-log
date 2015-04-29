@@ -7,6 +7,11 @@ import Point.Point;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 
+/**
+ * class Karakter
+ * Kelas ini merupakan objek dari karakter yang akan digunakan
+ * di kelas Main sebagai karakter utama
+ */
 
 public class Karakter {
 	private String Name;
@@ -15,6 +20,9 @@ public class Karakter {
 	private boolean alive;
 	private final int fieldSize = 7;
 
+	/**
+	 * Konstruktor Karakter
+	 */
 	public Karakter(){
 		Name = "Doge";
 		cPosition = new Point();
@@ -22,67 +30,127 @@ public class Karakter {
 		alive = true;
 	}
 
+	/**
+	 * Konstruktor Karakter
+	 * @param _Name String nama karakter
+	 */
 	public Karakter(String _Name){
 		Name = _Name;
 		cPosition = new Point();
 		alive = true;
 	}
 
+	/**
+	 * Konstruktor Karakter
+	 * @param K sebuah objek Karakter
+	 */
 	public Karakter(final Karakter K){
 		Name = K.Name;
 		cPosition = new Point(K.cPosition);
 		alive = K.alive;
 	}
 
+	/**
+	 * Method setKarakter
+	 * Copy seluruh value dari Karakter input ke this
+	 * @param _player Karakter lain
+	 */
 	public void setKarakter(Karakter _player){
 		this.setName(_player.getName());
 		this.setStatus(_player.getStatus());
 		this.setCPosition(_player.getCPosition());
 	}
 
+	/**
+	 * Method getName
+	 * @return Nama karakter
+	 */
 	public String getName(){
 		return Name;
 	}
 
+	/**
+	 * Method setName
+	 * @param _Name Nama baru
+	 */
 	public void setName(String _Name){
 		Name = _Name;
 	}
 
+	/**
+	 * Method getCPosition
+	 * @return posisi karakter
+	 */
 	public Point getCPosition(){
 		return cPosition;
 	}
 
+	/**
+	 * Method getCDirection
+	 * @return arah karakter
+	 */
 	public int getCDirection() {
 		return cDirection;
 	}
 
+	/**
+	 * Method getStatus
+	 * @return status karakter
+	 */
 	public boolean getStatus(){
 		return alive;
 	}
 
+	/**
+	 * Method setCPosition
+	 * @param P posisi baru
+	 */
 	public void setCPosition(Point P){
 		cPosition.setAbsis(P.getAbsis());
 		cPosition.setOrdinat(P.getOrdinat());
 	}
+
+	/**
+	 * Method setPosition
+	 * @param x absis baru
+	 * @param y ordinat baru
+	 */
 	public void setCPosition(int x, int y){
 		cPosition.setAbsis(x);
 		cPosition.setOrdinat(y);
 	}
+
+	/**
+	 * Method setCDirection
+	 * @param _direct arah baru
+	 */
 	public void setCDirection(int _direct){
 		cDirection = _direct;
 	}
 
+	/**
+	 * Method setStatus
+	 * @param _alive status baru karakter
+	 */
 	public void setStatus(boolean _alive){
 		alive = _alive;
 	}
 
-	public void PrintKarakter(){
+	/**
+	 * Method printKarakter
+	 */
+	public void printKarakter(){
 		System.out.println(getName());
 		System.out.println(getCPosition());
 		System.out.println(getCDirection());
 		System.out.println(getStatus());
 	}
 
+	/**
+	 * Method keyReleased
+	 * Method ini melakukan
+	 * @param key kode keyboard
+	 */
 	public void keyReleased(int key){
 		switch(key) {
 			case KeyEvent.VK_UP:

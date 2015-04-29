@@ -4,12 +4,20 @@ import Main.Main;
 import java.awt.event.KeyEvent;
 
 /**
- * Created by omarcelh on 13-Apr-15.
+ * class MoveForward
+ * yang mengimplementasi interface Command
  */
 public class MoveForward implements Command {
+    /**
+     * Konstruktor
+     */
     public MoveForward() {
     }
 
+    /**
+     * Method execute
+     * Menjalankan action MoveForward
+     */
     public void execute(){
         Main.player.keyReleased(KeyEvent.VK_UP);
     }

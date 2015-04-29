@@ -1,29 +1,39 @@
 package Command;
 
-import Char.Karakter;
-import Point.Point;
-
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-
 /**
- * Created by omarcelh on 13-Apr-15.
+ * class CommandProcessor
+ * kelas ini menghandle seluruh input dari player
  */
 public class CommandProcessor {
     private String currentCommand;
 
+    /**
+     * Konstruktor CommandProcessor
+     */
     public CommandProcessor(){
         currentCommand = "";
     }
-    
+
+    /**
+     * Method getCurrentCommand
+     * @return string command sekarang
+     */
     public String getCurrentCommand(){
         return currentCommand;
     }
-    
+
+    /**
+     * Method setCurrentCommand
+     * @param _currentCommand command baru
+     */
     public void setCurrentCommand(String _currentCommand){
         currentCommand = _currentCommand;
     }
 
+    /**
+     * Method run
+     * Menjalankan action dari command sekarang
+     */
     public void run(){
         switch(currentCommand){
             case "MoveRight":{

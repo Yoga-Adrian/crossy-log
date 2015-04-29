@@ -8,13 +8,13 @@ import Main.Main;
  * Created by yoga on 4/26/2015.
  */
 
-public class TimerAnimation extends JLabel implements ActionListener
+public class FieldGUI extends JLabel implements ActionListener
 {
     private int i,j;
 
-    public TimerAnimation(
+    public FieldGUI(
             int startX, int startY,
-            int delay, String gambar,int x,int y)
+            int delay, String gambar, int x, int y)
     {
         this.i=x;
         this.j=y;

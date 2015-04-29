@@ -56,7 +56,7 @@ public class KarakterTest extends TestCase {
     public void testPrintKarakter() throws Exception {
         //String result = "Doge\n" + "(0, 0)\n" + "true";
         Karakter instance = new Karakter();
-        instance.PrintKarakter();
+        instance.printKarakter();
         //assertEquals("error di PrintKarakter", result, );
     }
 
