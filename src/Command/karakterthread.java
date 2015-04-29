@@ -57,16 +57,16 @@ public class karakterthread extends JLabel implements ActionListener {
                     if (vector.elementAt(i).isItem(j))
                     {
                         if (vector.elementAt(i).getDirection())
-                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Log.jpg") );
+                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 10,"Log.jpg",i,j) );
                         else
-                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Log.jpg") );
+                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 10,"Log.jpg",i,j) );
                     }
                     else
                     {
                         if(vector.elementAt(i).getDirection())
-                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Water.jpg") );
+                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 10,"Water.jpg",i,j) );
                         else
-                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Water.jpg") );
+                            panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 10,"Water.jpg",i,j) );
                     }
                 }
             }
@@ -74,9 +74,9 @@ public class karakterthread extends JLabel implements ActionListener {
                 for (int j=0;j <vector.elementAt(i).getFieldSize();j++)
                 {
                     if (vector.elementAt(i).isItem(j))
-                        panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Tree.jpg") );
+                        panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 10,"Tree.jpg",i,j) );
                     else
-                        panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Ground.jpg") );
+                        panel.add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 10,"Ground.jpg",i,j) );
                 }
             }
         }
@@ -116,16 +116,16 @@ public class karakterthread extends JLabel implements ActionListener {
                     if (water.isItem(j))
                     {
                         if (water.getDirection())
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Log.jpg") );
+                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 10,"Log.jpg",i,j) );
                         else
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Log.jpg") );
+                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 10,"Log.jpg",i,j) );
                     }
                     else
                     {
                         if(water.getDirection())
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 1000,"Water.jpg") );
+                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 1, 0, 10,"Water.jpg",i,j) );
                         else
-                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 1000,"Water.jpg") );
+                            frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, -1, 0, 10,"Water.jpg",i,j) );
                     }
                 }
             }
@@ -140,9 +140,9 @@ public class karakterthread extends JLabel implements ActionListener {
                 for (int j=0;j <ground.getFieldSize();j++)
                 {
                     if (ground.isItem(j))
-                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Tree.jpg") );
+                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 10,"Tree.jpg",i,j) );
                     else
-                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 1000,"Ground.jpg") );
+                        frame.getContentPane().add( new TimerAnimation((j+1)*50, (12-(i+1))*50, 50, 0, 0, 0, 10,"Ground.jpg",i,j) );
                 }
             }
         }
