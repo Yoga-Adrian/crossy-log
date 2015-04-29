@@ -10,7 +10,7 @@ import javax.swing.*;
 /**
  * class KarakterGUI
  * merupakan child dari JLabel dan mengimplementasi interface ActionListener
- * clcass ini mengatur Graphics untuk menampilkan kela Karakter di JFrame
+ * class ini mengatur Graphics untuk menampilkan Karakter di JFrame
  * menggunakan Java Swing
  */
 public class KarakterGUI extends JLabel implements ActionListener {
@@ -26,7 +26,7 @@ public class KarakterGUI extends JLabel implements ActionListener {
             int delay, String gambar)
     {
         setIcon(new ImageIcon(gambar));
-        setSize(30, 30);
+        setSize(40, 40);
         setLocation(startX, startY);
         new javax.swing.Timer(delay, this).start();
     }
@@ -38,7 +38,7 @@ public class KarakterGUI extends JLabel implements ActionListener {
      */
     public static void moveMap(){
         JPanel panel = new JPanel();
-        panel.add(new KarakterGUI((Main.player.getCPosition().getAbsis() + 1) * 50, 13 * 50, 10, "Doge.jpg"));
+        panel.add(new KarakterGUI((Main.player.getCPosition().getAbsis() + 1) * 50 + 10, 13 * 50 + 10, 10, "Doge.jpg"));
         panel.setLayout(null);
         for (int i = 0; i < 12; i++) {
             if (Main.vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
@@ -81,7 +81,7 @@ public class KarakterGUI extends JLabel implements ActionListener {
         Main.frame.setContentPane(panel);
         Main.frame.setDefaultCloseOperation(Main.frame.EXIT_ON_CLOSE);
         Main.frame.getContentPane().setLayout(null);
-        Main.frame.getContentPane().add(new KarakterGUI(600, 13 * 50, 10, "Doge.jpg"));
+        Main.frame.getContentPane().add(new KarakterGUI(610, 13 * 50 + 10, 10, "Doge.jpg"));
 
         Random random = new Random();
 
@@ -143,15 +143,14 @@ public class KarakterGUI extends JLabel implements ActionListener {
     }
 
     /**
-     * Method actionPerformed
-     * Merupakan method implementasi dari kelas ActionListener
+     *
      * @param actionEvent
      */
     public void actionPerformed(ActionEvent actionEvent) {
         //  Determine next X position
-        int nextX =((Main.player.getCPosition().getAbsis()+1)*50);
+        int nextX =((Main.player.getCPosition().getAbsis()+1)*50 + 5);
 
-        int nextY =(12-(Main.player.getCPosition().getOrdinat()+1))*50;
+        int nextY =(12-(Main.player.getCPosition().getOrdinat()+1))*50 + 5;
         setLocation(nextX, nextY);
     }
 
