@@ -53,12 +53,14 @@ import javax.swing.*;
                     int startX, int startY,
                     int deltaX, int deltaY,
                     int directionX, int directionY,
-                    int delay, String gambar,int i,int j)
+                    int delay, String gambar,int x,int y)
             {
                 this.deltaX = deltaX;
                 this.deltaY = deltaY;
                 this.directionX = directionX;
                 this.directionY = directionY;
+                this.i=x;
+                this.j=y;
                 player = new Karakter("Doge");
                 setIcon( new ImageIcon(gambar) );
                 setSize(50, 50);
@@ -88,14 +90,16 @@ import javax.swing.*;
 */
                 //  Determine next Y position
 
-                //int nextY = nextY;
-                //setLocation(nextX, nextY);
-                if (karakterthread.vector.elementAt(i).getClass().getSimpleName()=="Water")
-                    if (karakterthread.vector.elementAt(i).isItem(j))
-                        setIcon(new ImageIcon("Log.jpg"));
-                    else
-                        setIcon(new ImageIcon("Water.jpg"));
-                parent.setVisible(true);
+                //int nextY =
+                 if (karakterthread.vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
+                     if (karakterthread.vector.elementAt(i).isItem(j))
+                         setIcon(new ImageIcon("Log.jpg"));
+                     else
+                         setIcon(new ImageIcon("Water.jpg"));
+                 }
+
+
+
             }
 
 
