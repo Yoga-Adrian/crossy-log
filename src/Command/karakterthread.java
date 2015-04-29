@@ -84,12 +84,7 @@ public class karakterthread extends JLabel implements ActionListener {
         frame.setContentPane(panel);
         frame.setVisible(true);
 
-        for(int i=0; i<12; i++){
-            for(int j=0; j<7; j++){
-                System.out.print(vector.elementAt(i).isItem(j) + " ");
-            }
-            System.out.println();
-        }
+
     }
 
     public static void main(String[] args){

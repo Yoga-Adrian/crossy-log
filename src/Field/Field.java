@@ -13,15 +13,17 @@ import java.util.Vector;
  */
 
 public abstract class Field extends Thread {
+    static protected boolean direction=true;
     protected int fieldCode;
     protected int fieldSize;
-    static protected boolean direction=true;
+    protected boolean rdirection;
     protected Vector<Boolean> item;
-
+    private boolean run=true;
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
+        rdirection=direction;
         direction = !direction;
         item = new Vector<>(fieldSize);
 	}
@@ -30,18 +32,33 @@ public abstract class Field extends Thread {
 		fieldCode = _fieldCode;
 		fieldSize = 7;
         Random random = new Random();
+        rdirection=direction;
         direction= !direction;
         item = new Vector<>(fieldSize);
 	}
 
     public void run()
     {
-        while (true) {
-            for(int i=0; i<12; i++) {
-                if(karakterthread.vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
-                    karakterthread.vector.elementAt(i).moveField(direction);
+        while (run) {
+
+                this.moveField(rdirection);
+           /* if (karakterthread.vector.elementAt(0).getClass().getSimpleName().equals("Water"))
+            {
+                if (karakterthread.vector.elementAt(0).getDirection())
+                {
+                    int x=karakterthread.player.getCPosition().getAbsis()+1;
+                    if (x>6)
+                        x=0;
+                    karakterthread.player.setCPosition(x,karakterthread.player.getCPosition().getOrdinat());
                 }
-            }
+                else
+                {
+                    int x=karakterthread.player.getCPosition().getAbsis()-1;
+                    if (x<0)
+                        x=6;
+                    karakterthread.player.setCPosition(x,karakterthread.player.getCPosition().getOrdinat());
+                }
+            }*/
 
             try {
                 sleep (1000);
@@ -50,8 +67,12 @@ public abstract class Field extends Thread {
             }
         }
     }
+    public void stopthread()
+    {
+        this.run=false;
 
-    public boolean getDirection(){return direction;}
+    }
+    public boolean getDirection(){return rdirection;}
 
     public int getFieldCode(){
         return fieldCode;

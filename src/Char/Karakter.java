@@ -65,7 +65,10 @@ public class Karakter {
 		cPosition.setAbsis(P.getAbsis());
 		cPosition.setOrdinat(P.getOrdinat());
 	}
-
+	public void setCPosition(int x, int y){
+		cPosition.setAbsis(x);
+		cPosition.setOrdinat(y);
+	}
 	public void setCDirection(int _direct){
 		cDirection = _direct;
 	}
@@ -84,6 +87,7 @@ public class Karakter {
 	public void keyReleased(int key){
 		switch(key) {
 			case KeyEvent.VK_UP:
+				karakterthread.vector.elementAt(0).stopthread();
 				karakterthread.vector.remove(0);
 				Random random = new Random();
 				if(random.nextInt(2)+1 == 1){

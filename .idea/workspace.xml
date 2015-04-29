@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="415086ab-b16b-4ff5-9663-5eb3c19c4132" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Command/TimerAnimation.java" afterPath="$PROJECT_DIR$/src/Command/TimerAnimation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Field/Field.java" afterPath="$PROJECT_DIR$/src/Field/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Char/Karakter.java" afterPath="$PROJECT_DIR$/src/Char/Karakter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Command/karakterthread.java" afterPath="$PROJECT_DIR$/src/Command/karakterthread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tubes 3.iws" />
@@ -28,14 +30,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Point/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Field/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.275862">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.3448277">
+              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
               <folding>
-                <element signature="e#1731#1732#0" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2128#2129#0" expanded="true" />
+                <element signature="e#2603#2604#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimerAnimation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TimerAnimation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Command/TimerAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54272515">
-              <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,8 +80,8 @@
       <file leaf-file-name="karakterthread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Command/karakterthread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.413794">
-              <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+            <state vertical-scroll-proportion="-15.344828">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,33 +89,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Water.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Field/Water.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Karakter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Karakter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Char/Karakter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Command/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.12240185">
+              <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,10 +174,10 @@
         <option value="$PROJECT_DIR$/src/Command/GraphicsPracticeDrawing.java" />
         <option value="$PROJECT_DIR$/src/Command/CoinSprite.java" />
         <option value="$PROJECT_DIR$/src/Command/Main.java" />
+        <option value="$PROJECT_DIR$/src/Command/TimerAnimation.java" />
+        <option value="$PROJECT_DIR$/src/Command/karakterthread.java" />
         <option value="$PROJECT_DIR$/src/Field/Field.java" />
         <option value="$PROJECT_DIR$/src/Char/Karakter.java" />
-        <option value="$PROJECT_DIR$/src/Command/karakterthread.java" />
-        <option value="$PROJECT_DIR$/src/Command/TimerAnimation.java" />
       </list>
     </option>
   </component>
@@ -934,7 +929,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430268422162</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pergerakan log , water sudah salam dengan vector item">
+      <created>1430275101320</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1430275101320</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1014,7 +1015,8 @@
     <MESSAGE value="tes" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/Command/karakterthread.java&#10;" />
     <MESSAGE value="item nya udah ga ngulang kayanya" />
-    <option name="LAST_COMMIT_MESSAGE" value="item nya udah ga ngulang kayanya" />
+    <MESSAGE value="pergerakan log , water sudah salam dengan vector item" />
+    <option name="LAST_COMMIT_MESSAGE" value="pergerakan log , water sudah salam dengan vector item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1048,8 +1050,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1106,8 +1110,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1205,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37659034">
-          <caret line="529" column="0" selection-start-line="529" selection-start-column="0" selection-end-line="529" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8346056">
@@ -1251,14 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Point/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1358,7 +1349,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1371,29 +1362,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Field/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.275862">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="e#1731#1732#0" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Field/Water.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Char/Karakter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="41" selection-start-line="93" selection-start-column="41" selection-end-line="93" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1406,6 +1378,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Command/MoveForward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1034484">
@@ -1414,22 +1394,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/karakterthread.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.413794">
-          <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.33256352">
+          <caret line="473" column="0" selection-start-line="473" selection-start-column="0" selection-end-line="473" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Command/TimerAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/TimerAnimation.java">
+    <entry file="file://$PROJECT_DIR$/src/Command/karakterthread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54272515">
-          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        <state vertical-scroll-proportion="-15.344828">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3448277">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+          <folding>
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#2603#2604#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Char/Karakter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12240185">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+          <folding>
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
           </folding>
         </state>
       </provider>
