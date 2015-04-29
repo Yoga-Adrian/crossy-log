@@ -18,10 +18,12 @@ public class karakterthread extends JLabel implements ActionListener {
     public static Karakter player;
     public static Vector<Field> vector;
     public static JFrame frame;
+
     private int deltaX = 2;
     private int deltaY = 3;
     private int directionX = 1;
     private int directionY = 1;
+
 
     public karakterthread(
             int startX, int startY,
@@ -190,10 +192,12 @@ public class karakterthread extends JLabel implements ActionListener {
                 }
             }
             else{ // Field Code = 2
+
                 if (!vector.elementAt(0).isItem(player.getCPosition().getAbsis())){
                     player.setStatus(false);
                 }
             }
+
             System.out.println(player.getStatus());
         }
     }
