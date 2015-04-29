@@ -154,6 +154,7 @@ public class Karakter {
 	public void keyReleased(int key){
 		switch(key) {
 			case KeyEvent.VK_UP:
+				Main.score+=1;
 				Main.vector.elementAt(0).stopThread();
 				Main.vector.remove(0);
 				Random random = new Random();
