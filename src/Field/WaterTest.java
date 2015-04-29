@@ -11,7 +11,7 @@ public class WaterTest extends TestCase {
             if(instance.isItem(i))
                 counter++;
         }
-        assertTrue("error di generateRandom Water", counter >= 2 && counter <= instance.getFieldSize() / 2);
+        assertTrue("error di generateRandom Water", counter >= 2 && counter <= instance.getFieldSize()/2 + 2);
     }
 
     public void testGetDirection() throws Exception {

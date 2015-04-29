@@ -26,7 +26,7 @@ public class KarakterGUI extends JLabel implements ActionListener {
             int delay, String gambar)
     {
         setIcon(new ImageIcon(gambar));
-        setSize(50, 50);
+        setSize(30, 30);
         setLocation(startX, startY);
         new javax.swing.Timer(delay, this).start();
     }
