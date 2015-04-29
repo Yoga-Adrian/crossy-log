@@ -18,7 +18,7 @@ public abstract class Field extends Thread {
     protected int fieldSize;
     protected boolean rdirection;
     protected Vector<Boolean> item;
-
+    private boolean run=true;
 	public Field(int _fieldCode){
 		fieldCode = _fieldCode;
 		fieldSize = 7;
@@ -39,9 +39,26 @@ public abstract class Field extends Thread {
 
     public void run()
     {
-        while (true) {
+        while (run) {
 
                 this.moveField(rdirection);
+           /* if (karakterthread.vector.elementAt(0).getClass().getSimpleName().equals("Water"))
+            {
+                if (karakterthread.vector.elementAt(0).getDirection())
+                {
+                    int x=karakterthread.player.getCPosition().getAbsis()+1;
+                    if (x>6)
+                        x=0;
+                    karakterthread.player.setCPosition(x,karakterthread.player.getCPosition().getOrdinat());
+                }
+                else
+                {
+                    int x=karakterthread.player.getCPosition().getAbsis()-1;
+                    if (x<0)
+                        x=6;
+                    karakterthread.player.setCPosition(x,karakterthread.player.getCPosition().getOrdinat());
+                }
+            }*/
 
             try {
                 sleep (1000);
@@ -50,7 +67,11 @@ public abstract class Field extends Thread {
             }
         }
     }
+    public void stopthread()
+    {
+        this.run=false;
 
+    }
     public boolean getDirection(){return rdirection;}
 
     public int getFieldCode(){
