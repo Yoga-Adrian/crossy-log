@@ -4,12 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/Char/KarakterTest.java" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="415086ab-b16b-4ff5-9663-5eb3c19c4132" name="Default" comment="score">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/ScoreGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tubes 3/Char/Karakter.class" afterPath="$PROJECT_DIR$/out/production/Tubes 3/Char/Karakter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Char/Karakter.java" afterPath="$PROJECT_DIR$/src/Char/Karakter.java" />
+    <list default="true" id="415086ab-b16b-4ff5-9663-5eb3c19c4132" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/KarakterGUI.java" afterPath="$PROJECT_DIR$/src/GUI/KarakterGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/Main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ScoreGUI.java" afterPath="$PROJECT_DIR$/src/GUI/ScoreGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="4cfccdee-cd94-47c6-b1a8-18811394a698" name="Rejected commit: Default" comment="Command" />
@@ -71,10 +68,20 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/KarakterGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+              <caret line="148" column="27" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldGUI.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/FieldGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.93564355">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,15 +112,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScoreGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/ScoreGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3465346">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,8 +192,8 @@
         <option value="$PROJECT_DIR$/src/GUI/TimerAnimation.java" />
         <option value="$PROJECT_DIR$/src/GUI/scoreGUI.java" />
         <option value="$PROJECT_DIR$/src/Char/Karakter.java" />
-        <option value="$PROJECT_DIR$/src/GUI/KarakterGUI.java" />
         <option value="$PROJECT_DIR$/src/GUI/ScoreGUI.java" />
+        <option value="$PROJECT_DIR$/src/GUI/KarakterGUI.java" />
       </list>
     </option>
   </component>
@@ -959,7 +966,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430224416443</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="tambah score">
+      <created>1430317507673</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1430317507673</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1038,7 +1051,8 @@
     <MESSAGE value="Timer" />
     <MESSAGE value="coba" />
     <MESSAGE value="Final without comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final without comment" />
+    <MESSAGE value="tambah score" />
+    <option name="LAST_COMMIT_MESSAGE" value="tambah score" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1381,25 +1395,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ScoreGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/KarakterGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="143" column="56" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+          <caret line="148" column="27" selection-start-line="148" selection-start-column="27" selection-end-line="148" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ScoreGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/FieldGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3465346">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.93564355">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

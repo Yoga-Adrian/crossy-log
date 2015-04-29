@@ -30,6 +30,8 @@ public class ScoreGUI extends JLabel implements ActionListener
     }
     /**
      *
+     *     public void actionPerformed(ActionEvent actionEvent)
+     *     prosedur untuk mengatur hal hal didalam panel yang akan dirubah saat permainan berlangsung
      * @param actionEvent
      */
     public void actionPerformed(ActionEvent actionEvent) {
