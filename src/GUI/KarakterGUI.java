@@ -39,6 +39,8 @@ public class KarakterGUI extends JLabel implements ActionListener {
     public static void moveMap(){
         JPanel panel = new JPanel();
         panel.add(new KarakterGUI((Main.player.getCPosition().getAbsis() + 1) * 50 + 10, 13 * 50 + 10, 10, "Doge.jpg"));
+        panel.add(new ScoreGUI(10));
+
         panel.setLayout(null);
         for (int i = 0; i < 12; i++) {
             if (Main.vector.elementAt(i).getClass().getSimpleName().equals("Water")) {
@@ -82,6 +84,7 @@ public class KarakterGUI extends JLabel implements ActionListener {
         Main.frame.setDefaultCloseOperation(Main.frame.EXIT_ON_CLOSE);
         Main.frame.getContentPane().setLayout(null);
         Main.frame.getContentPane().add(new KarakterGUI(610, 13 * 50 + 10, 10, "Doge.jpg"));
+        Main.frame.getContentPane().add(new ScoreGUI(10));
 
         Random random = new Random();
 
@@ -143,7 +146,8 @@ public class KarakterGUI extends JLabel implements ActionListener {
     }
 
     /**
-     *
+     *     public void actionPerformed(ActionEvent actionEvent)
+     *     prosedur untuk mengatur hal hal didalam panel yang akan dirubah saat permainan berlangsung
      * @param actionEvent
      */
     public void actionPerformed(ActionEvent actionEvent) {

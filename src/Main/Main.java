@@ -23,12 +23,13 @@ public class Main {
     public static Karakter player;
     public static Vector<Field> vector;
     public static JFrame frame;
+    public static int score=0;
 
     public static void main(String[] args){
+
         player = new Karakter("Doge");
         Point playerPosition = new Point(3,0);
         player.setCPosition(playerPosition);
-
         vector = new Vector<>();
         frame = new JFrame();
         GUI.KarakterGUI.newGame();
