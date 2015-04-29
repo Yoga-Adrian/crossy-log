@@ -1,6 +1,10 @@
 package Point;
 
-
+/**
+ * class Point
+ * merupakan kelas untuk menampung absis dan ordinat
+ * serta getter dan setter nya
+ */
 public class Point {
 	private int x;
 	private int y;

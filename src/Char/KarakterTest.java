@@ -8,12 +8,25 @@ import junit.framework.TestCase;
  */
 
 public class KarakterTest extends TestCase {
+    public void testSetKarakter() throws Exception {
+        Karakter instance = new Karakter("Avengers");
+        Karakter instanceTwo = new Karakter();
+        instance.setKarakter(instanceTwo);
+        assertEquals("error di setKarakter", instance, instanceTwo);
+    }
 
     public void testGetName() throws Exception {
         Karakter instance = new Karakter();
         String expResult = "Doge";
         String result = instance.getName();
         assertEquals("error di getName", expResult, result);
+    }
+
+    public void testSetName() throws Exception {
+        Karakter instance = new Karakter();
+        String result = "Emily";
+        instance.setName(result);
+        assertEquals("error di setName", result, instance.getName());
     }
 
     public void testGetCPosition() throws Exception {

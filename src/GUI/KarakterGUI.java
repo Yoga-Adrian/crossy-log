@@ -8,7 +8,10 @@ import java.util.Random;
 import javax.swing.*;
 
 /**
- * Created by yoga on 4/28/2015.
+ * class KarakterGUI
+ * merupakan child dari JLabel dan mengimplementasi interface ActionListener
+ * clcass ini mengatur Graphics untuk menampilkan kela Karakter di JFrame
+ * menggunakan Java Swing
  */
 public class KarakterGUI extends JLabel implements ActionListener {
     /**
@@ -140,7 +143,8 @@ public class KarakterGUI extends JLabel implements ActionListener {
     }
 
     /**
-     *
+     * Method actionPerformed
+     * Merupakan method implementasi dari kelas ActionListener
      * @param actionEvent
      */
     public void actionPerformed(ActionEvent actionEvent) {
