@@ -32,26 +32,29 @@ public abstract class Field extends Thread {
      */
     public void run() {
         while (run && Main.player.getStatus()) {
-            this.moveField();
-            if (Main.vector.elementAt(0).getClass().getSimpleName().equals("Water")
-                    && this== Main.vector.elementAt(0)) {
-                if (!Main.vector.elementAt(0).getDirection()) {
-                    int x= Main.player.getCPosition().getAbsis()+1;
-                    if (x>6)
-                        x=0;
-                    Main.player.setCPosition(x, Main.player.getCPosition().getOrdinat());
-                }
-                else {
-                    int x= Main.player.getCPosition().getAbsis()-1;
-                    if (x<0)
-                        x=6;
-                    Main.player.setCPosition(x, Main.player.getCPosition().getOrdinat());
-                }
-            }
             try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                this.moveField();
+                if (Main.vector.elementAt(0).getClass().getSimpleName().equals("Water")
+                        && this == Main.vector.elementAt(0)) {
+                    if (!Main.vector.elementAt(0).getDirection()) {
+                        int x = Main.player.getCPosition().getAbsis() + 1;
+                        if (x > 6)
+                            x = 0;
+                        Main.player.setCPosition(x, Main.player.getCPosition().getOrdinat());
+                    } else {
+                        int x = Main.player.getCPosition().getAbsis() - 1;
+                        if (x < 0)
+                            x = 6;
+                        Main.player.setCPosition(x, Main.player.getCPosition().getOrdinat());
+                    }
+                }
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } catch (Exception e){
+                
             }
         }
     }

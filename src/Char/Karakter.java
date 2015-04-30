@@ -177,6 +177,7 @@ public class Karakter {
 				} else {
 					cPosition.setAbsis(cPosition.getAbsis()+1);
 				}
+				Main.moveMap();
 				break;
 			case KeyEvent.VK_LEFT:
 				if(cPosition.getAbsis() == 0){
@@ -184,6 +185,7 @@ public class Karakter {
 				} else {
 					cPosition.setAbsis(cPosition.getAbsis()-1);
 				}
+				Main.moveMap();
 				break;
 		}
 	}

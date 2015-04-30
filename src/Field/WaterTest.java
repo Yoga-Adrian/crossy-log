@@ -11,12 +11,23 @@ public class WaterTest extends TestCase {
             if(instance.isItem(i))
                 counter++;
         }
-        assertTrue("error di generateRandom Water", counter >= 2 && counter <= instance.getFieldSize()/2 + 2);
+        assertTrue("error di generateRandom Water", counter >= 1 && counter <= (instance.getFieldSize()/2 + 2));
     }
 
     public void testGetDirection() throws Exception {
         Ground instance = new Ground();
-        assertTrue("error di getDirection", instance.getDirection());
+        instance.setDirection(true);
+        assertTrue("error di setDirection", instance.getDirection());
+        instance.setDirection(false);
+        assertFalse("error di setDirection", instance.getDirection());
+    }
+
+    public void testSetDirection() throws Exception {
+        Ground instance = new Ground();
+        instance.setDirection(true);
+        assertTrue("error di setDirection", instance.getDirection());
+        instance.setDirection(false);
+        assertFalse("error di setDirection", instance.getDirection());
     }
 
     public void testGetFieldSize() throws Exception {
