@@ -2,10 +2,8 @@ package GUI;
 
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 
 import Main.Main;
-import com.sun.deploy.panel.JSmartTextArea;
 
 /**
  * class ScoreGUI
