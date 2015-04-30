@@ -54,7 +54,7 @@ public abstract class Field extends Thread {
                     e.printStackTrace();
                 }
             } catch (Exception e){
-                
+
             }
         }
     }
